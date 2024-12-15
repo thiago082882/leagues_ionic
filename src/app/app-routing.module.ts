@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+   {
+    path: 'classification-table',
+    loadChildren: () => import('./pages/classification-table/classification-table.module').then( m => m.ClassificationTablePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'classification-table',
     pathMatch: 'full'
   },
+
 ];
 
 @NgModule({
